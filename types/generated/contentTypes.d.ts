@@ -795,7 +795,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
     image: Attribute.Media;
     content: Attribute.RichText;
     blog_category: Attribute.Relation<

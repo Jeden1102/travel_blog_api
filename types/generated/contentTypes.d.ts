@@ -797,7 +797,6 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required & Attribute.Unique;
     image: Attribute.Media;
-    content: Attribute.RichText;
     blog_category: Attribute.Relation<
       'api::blog.blog',
       'oneToOne',
@@ -809,6 +808,16 @@ export interface ApiBlogBlog extends Schema.CollectionType {
       'api::journey.journey'
     >;
     promoted: Attribute.Boolean;
+    landscape_image: Attribute.Media;
+    content: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          output: 'HTML';
+          preset: 'light';
+        }
+      >;
+    short_content: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

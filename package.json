@@ -9,9 +9,8 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@_sh/strapi-plugin-ckeditor": "^2.1.0",
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.10",
     "@strapi/plugin-cloud": "4.20.1",
     "@strapi/plugin-graphql": "^4.20.2",
     "@strapi/plugin-i18n": "4.20.1",

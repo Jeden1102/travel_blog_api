@@ -28,9 +28,6 @@
         "audios"
       ]
     },
-    "content": {
-      "type": "richtext"
-    },
     "blog_category": {
       "type": "relation",
       "relation": "oneToOne",
@@ -43,6 +40,28 @@
     },
     "promoted": {
       "type": "boolean"
+    },
+    "landscape_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    },
+    "short_content": {
+      "type": "text"
     }
   }
 }

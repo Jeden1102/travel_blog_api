@@ -817,7 +817,10 @@ export interface ApiBlogBlog extends Schema.CollectionType {
           preset: 'light';
         }
       >;
-    short_content: Attribute.Text;
+    short_content: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

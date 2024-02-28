@@ -61,7 +61,8 @@
       "customField": "plugin::ckeditor.CKEditor"
     },
     "short_content": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 255
     }
   }
 }
